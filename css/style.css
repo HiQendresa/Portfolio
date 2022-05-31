@@ -6,7 +6,6 @@ body {
   line-height: 30px;
   font-weight: 300;
   position: relative;
-  overflow-x: hidden !important;
 }
 body:before {
   content: "";
@@ -34,10 +33,6 @@ body,
   background: #000;
 }
 
-.unslate_co--site-wrap {
-  overflow-x: hidden;
-}
-
 ::-moz-selection {
   background: #000;
   color: #fff;
@@ -60,7 +55,6 @@ a, a:hover {
   position: relative;
   width: 100%;
   z-index: 1;
-  overflow-x: hidden !important;
 }
 @media (max-width: 991.98px) {
   .unslate_co--site-inner {
@@ -937,8 +931,7 @@ a, a:hover {
   line-height: 30px;
 }
 
-.unslate_co--site-wrap,
-.unslate_co--site-inner {
+#portfolio-section {
   overflow-x: hidden;
 }
 

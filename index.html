@@ -93,14 +93,7 @@
                     <a href="#services-section" class="nav-link">Services</a>
                   </li>
                   <li><a href="#skills-section" class="nav-link">Skills</a></li>
-                  <!-- <li>
-                    <a href="#testimonial-section" class="nav-link"
-                      >Testimonial</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#journal-section" class="nav-link">Journal</a>
-                  </li> -->
+
                   <li>
                     <a href="#contact-section" class="nav-link">Contact</a>
                   </li>
@@ -615,7 +608,7 @@
               <div class="col-md-6">
                 <form
                   method="post"
-                  class="form-outline-style-v1"
+                  class="form-outline-style-v1 form"
                   id="contactForm"
                 >
                   <div class="form-group row mb-0">
@@ -624,16 +617,16 @@
                       <input
                         name="name"
                         type="text"
-                        class="form-control"
+                        class="form-control name"
                         id="name"
                       />
                     </div>
                     <div class="col-lg-6 form-group gsap-reveal">
                       <label for="email">Email</label>
                       <input
-                        name="email"
+                        name="email_id"
                         type="email"
-                        class="form-control"
+                        class="form-control email"
                         id="email"
                       />
                     </div>
@@ -644,7 +637,7 @@
                         id="message"
                         cols="30"
                         rows="7"
-                        class="form-control"
+                        class="form-control message"
                       ></textarea>
                     </div>
                   </div>
@@ -652,7 +645,7 @@
                     <div class="col-md-12 d-flex align-items-center">
                       <input
                         type="submit"
-                        class="btn btn-outline-pill btn-custom-light mr-3"
+                        class="btn btn-outline-pill btn-custom-light mr-3 submitBtn"
                         value="Send Message"
                       />
                       <span class="submitting"></span>
@@ -731,5 +724,15 @@
 
     <script src="js/scripts-dist.js"></script>
     <script src="js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("FcbE-Bf_cjy7hWsC8");
+      })();
+    </script>
   </body>
 </html>

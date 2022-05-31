@@ -10,7 +10,6 @@ body {
   line-height: 30px;
   font-weight: 300;
   position: relative;
-  overflow-x: hidden !important;
   &:before {
     content: "";
     position: absolute;
@@ -37,9 +36,7 @@ body,
 .unslate_co--site-inner {
   background: $black;
 }
-.unslate_co--site-wrap {
-  overflow-x: hidden;
-}
+
 ::-moz-selection {
   background: $black;
   color: $white;
@@ -61,7 +58,7 @@ a {
   position: relative;
   width: 100%;
   z-index: 1;
-  overflow-x: hidden !important;
+
   @include media-breakpoint-down(md) {
     margin-bottom: auto !important;
   }
