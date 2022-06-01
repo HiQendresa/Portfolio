@@ -22,7 +22,7 @@ jQuery(function ($) {
   scrollWindow();
   counter();
   jarallaxPlugin();
-  //   contactForm();
+  contactForm();
   stickyFillPlugin();
   animateReveal();
 });
@@ -650,25 +650,51 @@ var animateReveal = function () {
 };
 
 //Email
+
+const contactForm = function () {
+  if ($("#contactForm").length > 0) {
+    $("#contactForm").validate({
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true,
+        },
+        message: {
+          required: true,
+          minlength: 5,
+        },
+      },
+      messages: {
+        name: "Please enter your name",
+        email: "Please enter a valid email address",
+        message: "Please enter a message",
+      },
+    });
+  }
+};
 const submitBtn = document.querySelector(".button");
 
 document.querySelector(".form").addEventListener("submit", function (event) {
   event.preventDefault();
+  if (!userName.value == "" && !email.value == "" && !message.value == "") {
+    const serviceID = "service_m7ycj3p";
+    const templateID = "template_q1fzszn";
 
-  const serviceID = "service_m7ycj3p";
-  const templateID = "template_q1fzszn";
-
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      _submit.style.display = "block";
-      clear();
-      $("#form-message-success").fadeIn();
-    },
-    (err) => {
-      $("#form-message-warning").fadeIn();
-      alert(JSON.stringify(err));
-    }
-  );
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        _submit.style.display = "block";
+        clear();
+        $("#form-message-success").fadeIn();
+      },
+      (err) => {
+        $("#form-message-warning").fadeIn();
+        alert(JSON.stringify(err));
+      }
+    );
+  } else {
+    contactForm();
+  }
 });
 
 const clear = function () {

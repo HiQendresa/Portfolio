@@ -1278,7 +1278,6 @@ figure.dotted-bg:before {
   margin-bottom: 50px;
 }
 .form-outline-style-v1 .form-group label {
-  position: absolute;
   top: 5px;
   transition: 0.3s all ease;
 }
